@@ -88,13 +88,13 @@
         
         .chart-container {
             height: 220px;
-            width: 450px;
+            width: 100%;
             position: relative;
         }
         
         .timeline-container {
             height: 300px;
-            width: 500px;
+            width: 100%;
             position: relative;
         }
         
@@ -131,7 +131,7 @@
         
         .architecture-diagram {
             height: 340px;
-            width: 550px;
+            width: 100%;
             position: relative;
         }
         
@@ -229,6 +229,36 @@
                 width: 210mm;
                 padding: 20mm;
             }
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .slide {
+                padding: 1.25rem; /* reduce from 4rem */
+            }
+            .slide .flex.flex-row {
+                flex-direction: column;
+            }
+            .slide .w-1\/2 {
+                width: 100%;
+                padding-right: 0 !important;
+                margin-top: 1rem;
+            }
+            .grid.grid-cols-3 {
+                grid-template-columns: 1fr;
+            }
+            .grid.grid-cols-2 {
+                grid-template-columns: 1fr;
+            }
+            .architecture-diagram {
+                height: 420px; /* give more vertical space when stacked */
+            }
+            .timeline-container { height: 260px; }
+            .chart-container { height: 200px; }
+            h1.text-6xl { font-size: 2rem; }
+            h1.text-5xl { font-size: 1.75rem; }
+            h1.text-4xl { font-size: 1.5rem; }
+            .text-2xl { font-size: 1.125rem; }
         }
     </style>
 </head>
