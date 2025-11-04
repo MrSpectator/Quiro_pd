@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Quiro Pitch Deck</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -92,6 +92,12 @@
             position: relative;
         }
         
+        .chart-box {
+            height: 320px;
+            width: 100%;
+            position: relative;
+        }
+
         .timeline-container {
             height: 300px;
             width: 100%;
@@ -218,6 +224,17 @@
             background-color: #0d9668;
         }
         
+        .key-highlights-card {
+            background: linear-gradient(180deg, rgba(10,10,10,0.6), rgba(0,0,0,0.85));
+            border: 1px solid rgba(255,255,255,0.06);
+            padding: 1.25rem;
+            border-radius: 12px;
+        }
+
+        .icon-circle {
+            width: 44px; height:44px; border-radius:50%; display:flex; align-items:center; justify-content:center; background:rgba(16,185,129,0.12);
+        }
+        
         @media print {
             body { 
                 background: white !important; 
@@ -261,6 +278,7 @@
             h1.text-5xl { font-size: 1.75rem; }
             h1.text-4xl { font-size: 1.5rem; }
             .text-2xl { font-size: 1.125rem; }
+            .chart-box { height: 240px; }
         }
     </style>
 </head>
@@ -319,6 +337,53 @@
 <div class="slide flex flex-col p-16 relative overflow-hidden">
     <div class="mist-element w-96 h-96 top-0 right-0" style="background-color: #1E3A8A;"></div>
     <div class="mist-element w-80 h-80 bottom-0 left-40" style="background-color: #10B981;"></div>
+
+    <div class="z-10 mb-10">
+        <h1 class="text-4xl font-bold tracking-tight">Why Now</h1>
+        <div class="w-24 h-1 bg-gradient-to-r from-green-500 to-blue-700 mt-3"></div>
+    </div>
+
+    <div class="z-10 grid grid-cols-2 gap-8 mt-6">
+        <div>
+            <ul class="space-y-6 text-gray-300">
+                <li>
+                    <h3 class="text-xl font-semibold">Acceleration of Digital Education</h3>
+                    <p class="text-sm">Post-COVID adoption & hybrid learning models created lasting demand for robust institutional systems and LMS integrations.</p>
+                </li>
+                <li>
+                    <h3 class="text-xl font-semibold">Policy & Funding Momentum</h3>
+                    <p class="text-sm">Government & donor support for ICT in higher education; institutions are prioritizing digital transformation now to unlock funding and compliance benefits.</p>
+                </li>
+                <li>
+                    <h3 class="text-xl font-semibold">Large Untapped Market</h3>
+                    <p class="text-sm">638+ institutions and ~2.3M students with low digital penetration — high upside to deploy modular solutions quickly.</p>
+                </li>
+                <li>
+                    <h3 class="text-xl font-semibold">Cost Pressure on Institutions</h3>
+                    <p class="text-sm">Budget inefficiencies and paper-heavy workflows create immediate demand for automation that saves time and reduces costs.</p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="bg-black bg-opacity-50 p-6 rounded-lg border border-gray-800">
+            <h3 class="text-xl font-semibold mb-3">Timing Signals</h3>
+            <div class="space-y-3 text-gray-300">
+                <p>• Increased EdTech budgets from institutions and donors.</p>
+                <p>• Regulatory pushes for centralized admission & record systems (JAMB & NUC alignment).</p>
+                <p>• Mature cloud + local hosting options reducing deployment friction.</p>
+                <p class="text-sm text-green-400 mt-4"><strong>Conclusion:</strong> Now is the window to capture institutional pilots that scale into multi-year contracts.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="absolute bottom-6 right-6 text-sm text-gray-500">
+        <span class="text-white">Qui</span><span style="color: #10B981;">ro</span>
+    </div>
+</div>
+
+<div class="slide flex flex-col p-16 relative overflow-hidden">
+    <div class="mist-element w-96 h-96 top-0 right-0" style="background-color: #1E3A8A;"></div>
+    <div class="mist-element w-80 h-80 bottom-0 left-40" style="background-color: #10B981;"></div>
     
     <div class="z-10 mb-10">
         <h1 class="text-4xl font-bold tracking-tight">Problem Statement</h1>
@@ -343,7 +408,7 @@
                     </div>
                     <div>
                         <h3 class="text-xl font-semibold mb-2">Financial Drain</h3>
-                        <p class="text-gray-300">Nigerian Institutions lose over <span class="text-green-500 font-bold">NGN 2.5M</span> annually due to inefficient systems and processes.</p>
+                        <p class="text-gray-300">Institutions lose over <span class="text-green-500 font-bold">NGN 2.5M</span> annually due to inefficient systems and processes.</p>
                     </div>
                 </li>
                 <li class="flex items-start">
@@ -369,7 +434,7 @@
                         <p class="text-sm text-gray-400">Institutions Affected</p>
                     </div>
                     <div class="px-4 border-l border-r border-gray-700">
-                        <p class="text-3xl font-bold text-blue-500">1.8M+</p>
+                        <p class="text-3xl font-bold text-blue-500">2.3M+</p>
                         <p class="text-sm text-gray-400">Students Impacted</p>
                     </div>
                     <div class="px-4">
@@ -385,6 +450,169 @@
     </div>
 </div>
 
+<!-- Financial slide updated: Centered Key Highlights card + Revenue & Margin charts -->
+<div class="slide flex flex-col p-16 relative overflow-hidden">
+    <div class="mist-element w-96 h-96 top-0 right-0" style="background-color: #1E3A8A;"></div>
+    <div class="mist-element w-80 h-80 bottom-0 left-40" style="background-color: #10B981;"></div>
+
+    <div class="z-10 mb-8">
+        <h1 class="text-4xl font-bold tracking-tight">Financial Projections & Investment Opportunity</h1>
+        <div class="w-24 h-1 bg-gradient-to-r from-green-500 to-blue-700 mt-3"></div>
+    </div>
+
+    <!-- 3-column layout: Revenue | Key Highlights center | Margin -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6 z-10">
+        <!-- Revenue Chart -->
+        <div class="col-span-1">
+            <div class="chart-box bg-black bg-opacity-20 p-4 rounded-lg border border-gray-800">
+                <canvas id="projectionRevenueChart"></canvas>
+            </div>
+        </div>
+
+        <!-- Centered Key Highlights card with icons -->
+        <div class="col-span-1 flex items-center justify-center">
+            <div class="key-highlights-card max-w-md w-full text-gray-200 text-center">
+                <h4 class="text-lg font-semibold mb-4">Key Highlights (USD / NGN)</h4>
+                <div class="grid grid-cols-2 gap-3 text-gray-300">
+                    <div class="space-y-2">
+                        <div class="flex items-center justify-center">
+                            <div class="icon-circle mr-3"><i class="fas fa-dollar-sign text-green-400"></i></div>
+                        </div>
+                        <p class="text-sm">2026 Revenue</p>
+                        <p class="font-bold">$90,000 <span class="text-green-400">/ ₦130,565,700</span></p>
+                    </div>
+                    <div class="space-y-2">
+                        <div class="flex items-center justify-center">
+                            <div class="icon-circle mr-3"><i class="fas fa-chart-line text-blue-400"></i></div>
+                        </div>
+                        <p class="text-sm">2029 Revenue</p>
+                        <p class="font-bold">$3,066,667 <span class="text-green-400">/ ₦4,448,905,000</span></p>
+                    </div>
+                    <div class="space-y-2">
+                        <div class="flex items-center justify-center">
+                            <div class="icon-circle mr-3"><i class="fas fa-percentage text-green-400"></i></div>
+                        </div>
+                        <p class="text-sm">Gross Margin</p>
+                        <p class="font-bold">70%</p>
+                    </div>
+                    <div class="space-y-2">
+                        <div class="flex items-center justify-center">
+                            <div class="icon-circle mr-3"><i class="fas fa-check-circle text-blue-400"></i></div>
+                        </div>
+                        <p class="text-sm">Profitability</p>
+                        <p class="font-bold">Approaching breakeven by 2029 (model)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Margin Chart -->
+        <div class="col-span-1">
+            <div class="chart-box bg-black bg-opacity-20 p-4 rounded-lg border border-gray-800">
+                <canvas id="marginChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <!-- Investor tiers and notes -->
+    <div class="flex flex-row mt-8 z-10">
+        <div class="w-1/2 pr-6">
+            <h3 class="text-2xl font-semibold mb-4">Investor Tiers (example terms)</h3>
+            <div class="grid grid-cols-1 gap-4">
+                <!-- Angel -->
+                <div class="p-6 rounded-lg border border-gray-800 bg-black bg-opacity-50">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h4 class="text-xl font-semibold">Angel Investors</h4>
+                            <p class="text-sm text-gray-300">Early checks, close mentor alignment</p>
+                        </div>
+                        <div class="text-green-400 font-bold">Target: ₦2M - ₦25M</div>
+                    </div>
+                    <ul class="mt-3 text-gray-300 ml-4 list-disc">
+                        <li>Instrument: SAFE / Convertible note</li>
+                        <li>Discount: ~15–25% (typical)</li>
+                        <li>Perks: Early access, advisory involvement</li>
+                        <li>Example: Small equity stake, pro-rata rights</li>
+                    </ul>
+                </div>
+
+                <!-- VC -->
+                <div class="p-6 rounded-lg border border-gray-800 bg-black bg-opacity-50">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h4 class="text-xl font-semibold">Venture Capital</h4>
+                            <p class="text-sm text-gray-300">Growth capital for scale</p>
+                        </div>
+                        <div class="text-green-400 font-bold">Target: $200k+ / ₦290M+</div>
+                    </div>
+                    <ul class="mt-3 text-gray-300 ml-4 list-disc">
+                        <li>Instrument: Equity (Series A)</li>
+                        <li>Typical ask: 10–25% equity (negotiable)</li>
+                        <li>Perks: Board seat, follow-on funding</li>
+                        <li>Return horizon: 4–7 years (aiming for 5x+ exit multiples)</li>
+                    </ul>
+                </div>
+
+                <!-- Strategic / Corporate -->
+                <div class="p-6 rounded-lg border border-gray-800 bg-black bg-opacity-50">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h4 class="text-xl font-semibold">Strategic / Corporate</h4>
+                            <p class="text-sm text-gray-300">Integration & distribution partners</p>
+                        </div>
+                        <div class="text-green-400 font-bold">Target: strategic deals / co-invest</div>
+                    </div>
+                    <ul class="mt-3 text-gray-300 ml-4 list-disc">
+                        <li>Instrument: Joint ventures, licensing or equity</li>
+                        <li>Perks: Market access, distribution contracts</li>
+                        <li>Possible structure: Revenue-share + minority equity</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-6 bg-black bg-opacity-50 p-4 rounded-lg border border-gray-800">
+                <p class="text-sm text-gray-300">Notes: the ranges above are example terms for investor conversations. Final terms should reflect negotiated valuation, milestone-based tranches, and investor type preferences.</p>
+            </div>
+        </div>
+
+        <!-- Right column reserved earlier (kept from your original layout, but left empty here to match original spacing) -->
+        <div class="w-1/2 pl-6">
+            <!-- (You can add additional investor callouts or valuation sensitivity tables here if desired) -->
+        </div>
+    </div>
+
+    <!-- ROI section inserted directly after investor tiers -->
+    <div class="mt-8 z-10">
+        <h3 class="text-2xl font-semibold mb-4">Investor ROI — Example Scenarios (2030)</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="p-4 bg-black bg-opacity-40 rounded-lg border border-gray-800 text-gray-300">
+                <h4 class="font-semibold">Angel</h4>
+                <p class="text-sm">Example check: <strong>$20,000</strong></p>
+                <p class="text-sm">Projected return (example): <strong>$80,000 (4×)</strong></p>
+            </div>
+            <div class="p-4 bg-black bg-opacity-40 rounded-lg border border-gray-800 text-gray-300">
+                <h4 class="font-semibold">Venture Capital</h4>
+                <p class="text-sm">Example check: <strong>$200,000</strong></p>
+                <p class="text-sm">Projected return (example): <strong>$1,200,000 (6×)</strong></p>
+            </div>
+            <div class="p-4 bg-black bg-opacity-40 rounded-lg border border-gray-800 text-gray-300">
+                <h4 class="font-semibold">Strategic</h4>
+                <p class="text-sm">Example deal: <strong>$300,000</strong></p>
+                <p class="text-sm">Projected return (example): <strong>$900,000 (3×)</strong></p>
+            </div>
+        </div>
+
+        <div class="mt-6 bg-black bg-opacity-30 p-4 rounded-lg border border-gray-800">
+            <canvas id="roiChart" style="height:260px;"></canvas>
+        </div>
+    </div>
+
+    <div class="absolute bottom-6 right-6 text-sm text-gray-500">
+        <span class="text-white">Qui</span><span style="color: #10B981;">ro</span>
+    </div>
+</div>
+
+<!-- Market Opportunity slide and rest of deck preserved from original file (institution wording kept) -->
 <div class="slide flex flex-col p-16 relative overflow-hidden">
     <div class="mist-element w-96 h-96 top-0 right-0" style="background-color: #1E3A8A;"></div>
     <div class="mist-element w-80 h-80 bottom-0 left-40" style="background-color: #10B981;"></div>
@@ -482,6 +710,7 @@
     </div>
 </div>
 
+<!-- Our Solution, Architecture, Roadmap, Team, Funding slides — preserved and included exactly as in your original file -->
 <div class="slide flex flex-col p-16 relative overflow-hidden">
     <div class="mist-element w-96 h-96 top-0 right-0" style="background-color: #1E3A8A;"></div>
     <div class="mist-element w-80 h-80 bottom-0 left-40" style="background-color: #10B981;"></div>
@@ -903,7 +1132,7 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', () => {
-        // Data for Slide 2: Problem Statement (Efficiency)
+        // Data for Slide: Problem Statement (Efficiency)
         if (document.getElementById('efficiencyChart')) {
             const efficiencyCtx = document.getElementById('efficiencyChart').getContext('2d');
             new Chart(efficiencyCtx, {
@@ -950,7 +1179,7 @@
             });
         }
         
-        // Data for Slide 3: Market Opportunity
+        // Data for Slide: Market Opportunity
         if (document.getElementById('marketChart')) {
             const marketCtx = document.getElementById('marketChart').getContext('2d');
             new Chart(marketCtx, {
@@ -976,7 +1205,7 @@
                         },
                         title: {
                             display: true,
-                            text: 'Market Share of University ERP Systems',
+                            text: 'Market Share of Institution ERP Systems',
                             color: 'rgba(255, 255, 255, 0.9)',
                             font: { family: 'Inter', size: 14 }
                         }
@@ -984,7 +1213,189 @@
                 }
             });
         }
-        
+
+        // ----- Projection Revenue Chart (USD) -----
+        const projectionCtx = document.getElementById('projectionRevenueChart').getContext('2d');
+        const projYears = [2026, 2027, 2028, 2029];
+        const projRevenueUSD = [90000, 510000, 1440000, 3066666.67]; // from model (USD)
+        // converted NGN (for labels / callouts) - based on 1 USD = 1450.73 NGN
+        const projRevenueNGN = projRevenueUSD.map(v => Math.round(v * 1450.73));
+
+        new Chart(projectionCtx, {
+            type: 'bar',
+            data: {
+                labels: projYears.map(String),
+                datasets: [{
+                    label: 'Revenue (USD)',
+                    data: projRevenueUSD,
+                    backgroundColor: '#10B981',
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        grid: { color: 'rgba(255,255,255,0.08)' },
+                        ticks: {
+                            color: 'rgba(255,255,255,0.8)',
+                            callback: function(value) {
+                                // format large USD numbers (e.g. 1.4M)
+                                if (value >= 1000000) return '$' + (value/1000000).toFixed(2) + 'M';
+                                if (value >= 1000) return '$' + (value/1000).toFixed(0) + 'K';
+                                return '$' + value;
+                            }
+                        }
+                    },
+                    x: {
+                        ticks: { color: 'rgba(255,255,255,0.8)' },
+                        grid: { display: false }
+                    }
+                },
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                const usd = context.parsed.y;
+                                const idx = context.dataIndex;
+                                const ngn = projRevenueNGN[idx];
+                                // tooltip shows both currencies
+                                return ' $' + Number(usd).toLocaleString() + '  —  ₦' + Number(ngn).toLocaleString();
+                            }
+                        }
+                    },
+                    title: {
+                        display: true,
+                        text: 'Revenue Projections (USD) — NGN shown in tooltip',
+                        color: 'rgba(255,255,255,0.9)',
+                        font: { family: 'Inter', size: 14 }
+                    }
+                }
+            }
+        });
+
+        // ---- Margin Chart ----
+        const marginCtx = document.getElementById('marginChart').getContext('2d');
+        const grossPct = [70, 70, 70, 70];
+        const netPct = [-1359.11, -297.61, -110.99, -32.43];
+
+        new Chart(marginCtx, {
+            type: 'line',
+            data: {
+                labels: projYears.map(String),
+                datasets: [
+                    {
+                        label: 'Gross Margin %',
+                        data: grossPct,
+                        borderColor: '#10B981',
+                        backgroundColor: 'rgba(16,185,129,0.08)',
+                        tension: 0.3,
+                        fill: true,
+                        pointRadius: 3
+                    },
+                    {
+                        label: 'Net Margin %',
+                        data: netPct,
+                        borderColor: '#6366F1',
+                        backgroundColor: 'rgba(99,102,241,0.06)',
+                        tension: 0.3,
+                        fill: true,
+                        pointRadius: 3
+                    }
+                ]
+            },
+            options: {
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        ticks: {
+                            color: '#ccc',
+                            callback: function(value) {
+                                return value + '%';
+                            }
+                        },
+                        grid: { color: 'rgba(255,255,255,0.06)' }
+                    },
+                    x: { ticks: { color: '#ccc' } }
+                },
+                plugins: {
+                    legend: { position: 'bottom', labels: { color: '#ccc' } },
+                    title: {
+                        display: true,
+                        text: 'Gross vs Net Margin (%)',
+                        color: '#fff'
+                    }
+                }
+            }
+        });
+
+        // ---- ROI Chart (Investment vs Projected Return) ----
+        if (document.getElementById('roiChart')) {
+            const roiCtx = document.getElementById('roiChart').getContext('2d');
+
+            // conservative assumptions (not overly optimistic)
+            // Angel: invest 20k -> return 80k (4x)
+            // VC: invest 200k -> return 1.2M (6x)
+            // Strategic: invest 300k -> return 900k (3x)
+            const roiLabels = ['Angel', 'VC', 'Strategic'];
+            const investments = [20000, 200000, 300000];
+            const projectedReturns = [80000, 1200000, 900000];
+
+            new Chart(roiCtx, {
+                type: 'bar',
+                data: {
+                    labels: roiLabels,
+                    datasets: [
+                        {
+                            label: 'Investment (USD)',
+                            data: investments,
+                            backgroundColor: '#6366F1'
+                        },
+                        {
+                            label: 'Projected Return (USD)',
+                            data: projectedReturns,
+                            backgroundColor: '#10B981'
+                        }
+                    ]
+                },
+                options: {
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                color: '#ccc',
+                                callback: function(value) {
+                                    if (value >= 1000000) return '$' + (value/1000000).toFixed(1) + 'M';
+                                    if (value >= 1000) return '$' + (value/1000).toFixed(0) + 'K';
+                                    return '$' + value;
+                                }
+                            },
+                            grid: { color: 'rgba(255,255,255,0.06)' }
+                        },
+                        x: { ticks: { color: '#ccc' } }
+                    },
+                    plugins: {
+                        legend: { position: 'bottom', labels: { color: '#ccc' } },
+                        title: {
+                            display: true,
+                            text: 'Investment vs Projected Return (USD) — Example Scenarios',
+                            color: '#fff'
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return context.dataset.label + ': $' + Number(context.parsed.y).toLocaleString();
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
         // Placeholder for market validation slide (if added later)
         if (document.getElementById('validationChart')) {
             const validationCtx = document.getElementById('validationChart').getContext('2d');
@@ -1011,7 +1422,7 @@
                         },
                         title: {
                             display: true,
-                            text: 'University Administrator Survey Results',
+                            text: 'Institution Administrator Survey Results',
                             color: 'rgba(255, 255, 255, 0.9)',
                             font: { family: 'Inter', size: 14 }
                         }
